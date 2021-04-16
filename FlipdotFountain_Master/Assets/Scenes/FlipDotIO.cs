@@ -307,7 +307,7 @@ public class FlipDotIO : MonoBehaviour
                 SendToScreen((byte)(1), msg[0]);
                 for (int i = 0; i < msg.Length; i++)
                 {
-                    SendToScreen((byte)(i + 3), msg[i]);
+                    SendToScreen((byte)settings.panels[i].id, msg[i]);
                 }
                 break;
             case FlipDotProtocol.UDP:

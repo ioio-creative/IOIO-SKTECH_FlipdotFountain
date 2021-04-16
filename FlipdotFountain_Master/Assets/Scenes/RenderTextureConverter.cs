@@ -51,7 +51,10 @@ public class RenderTextureConverter : MonoBehaviour
             ReadToTex2D();
             var pixels = GetInt32Pixels(flipDotTex2D_RGBA32);
 
-            flipDotIOSharpClass.SendFlipDotImage(pixels, false);
+            if (flipDotIOSharpClass.enabled)
+            {
+                flipDotIOSharpClass.SendFlipDotImage(pixels, false);
+            }
 
             //Debug.Log(pixels.Length + "Pixels");
             keyPressed = false;

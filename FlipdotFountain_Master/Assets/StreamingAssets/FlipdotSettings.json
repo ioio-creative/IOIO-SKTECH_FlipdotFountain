@@ -17,6 +17,24 @@
       "height": 7,
       "ip": "10.0.1.222",
       "rxPort": 5001
+    },
+    {
+      "id": 5,
+      "startX": 28,
+      "startY": 0,
+      "width": 28,
+      "height": 7,
+      "ip": "10.0.1.222",
+      "rxPort": 5001
+    },
+    {
+      "id": 6,
+      "startX": 28,
+      "startY": 7,
+      "width": 28,
+      "height": 7,
+      "ip": "10.0.1.222",
+      "rxPort": 5001
     }
   ],
   "comPort": "COM6",
@@ -30,5 +48,5 @@
   "parity": 0,
   "dataBits": 8,
   "stopBits": 1,
-  "lineStride": 28
+  "lineStride": 56
 }
