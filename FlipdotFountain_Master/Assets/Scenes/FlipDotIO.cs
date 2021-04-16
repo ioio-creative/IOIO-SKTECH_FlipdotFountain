@@ -44,9 +44,9 @@ public struct FlipDotSettings
     public string comPort;          // = "COM1";       
     public IPAddressConfig[] rxAddresses;   // ip:port addresses for udp / tcp
     public int baudRate;            // = 57600;
-    public Parity parity;           // = 0; // = Parity.None;
+    public int parity;           // = 0; // = Parity.None;
     public int dataBits;            // = 8;
-    public StopBits stopBits;       // = 1; // = Stopbits.One;
+    public int stopBits;       // = 1; // = Stopbits.One;
     public int lineStride;          // panelColCount * dotsPerRow
 }
 
@@ -88,7 +88,7 @@ public class FlipDotIO : MonoBehaviour
             default:
                 if (sp == null || !sp.IsOpen)
                 {
-                    sp = new SerialPort(settings.comPort, settings.baudRate, settings.parity, settings.dataBits, settings.stopBits);
+                    sp = new SerialPort(settings.comPort, settings.baudRate, (System.IO.Ports.Parity)settings.parity, settings.dataBits, (System.IO.Ports.StopBits)settings.stopBits);
                     sp.Open();
                 }
                 break;
