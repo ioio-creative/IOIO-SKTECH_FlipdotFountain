@@ -37,7 +37,7 @@
       "rxPort": 5001
     }
   ],
-  "comPort": "COM6",
+  "comPort": "COM3",
   "rxAddresses": [
     {
       "ip": "10.0.1.222",
