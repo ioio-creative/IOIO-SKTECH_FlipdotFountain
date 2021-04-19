@@ -48,6 +48,14 @@ public class AudioConfig : MonoBehaviour
             }
             catch { }
         }
+        if (Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.Keypad4))
+        {
+            try
+            {
+                tracks[3].mute = !tracks[3].mute;
+            }
+            catch { }
+        }
     }
 }
 
